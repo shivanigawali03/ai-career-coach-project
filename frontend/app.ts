@@ -1,0 +1,29 @@
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
+  imports: [
+  FormsModule,
+  HttpClientModule
+]
+
+  template: `
+    <h1>AI Career Coach</h1>
+
+    <nav>
+      <a routerLink="/">Home</a> |
+      <a routerLink="/register">Register</a> |
+      <a routerLink="/chatbot">Chatbot</a>
+    </nav>
+
+    <hr>
+
+    <router-outlet></router-outlet>
+  `
+})
+export class App {
+
+}
